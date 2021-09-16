@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 2 task 3</title>
+</head>
+
+<body>
+    <script>
+        'use strict';
+        /*
+        Объявить две переменные a и b и задать им целочисленные произвольные начальные 
+        значения.
+        Затем написать скрипт, который работает по следующему принципу:
+        - если a и b положительные, вывести их разность (ноль можно считать положительным числом);
+        - если а и b отрицательные, вывести их произведение;
+        - * (этот пункт по сложнее, делайте по желанию) если а и b разных знаков, вывести их сумму;
+        
+        не до конца понял задание:) в случае с разностью вычитаю из большего меньшее) 
+        и сделал два варианта - посложнее и полегче))
+        если надо было по-другому, напишите плз в комментах в гите. Спасибо)
+        */
+        function EasyWay() {
+            while (true) {
+                alert('Please use two positive or two negative numbers as variables');
+                let a = Number(prompt('Insert first variable (a):'));
+                let b = Number(prompt('Insert second variable (b):'));
+                if ((a >= 0) && (b >= 0)) {
+                    if (a >= b) {
+                        alert(a - b)
+                        break
+                    } else {
+                        alert(b - a)
+                        break
+                    }
+                }
+                else if ((a < 0) && (b < 0)) {
+                    alert(a * b)
+                    break
+                }
+                else {
+                    alert('Hey!\nYou inserted variables with different sign!')
+                }
+            }
+        }
+
+        function HardWay() {
+            let a = Number(prompt('Insert first variable (a):'));
+            let b = Number(prompt('Insert second variable (b):'));
+            if ((a >= 0) && (b >= 0)) {
+                if (a >= b) {
+                    alert(a - b)
+                } else {
+                    alert(b - a)
+                }
+            }
+            else if ((a < 0) && (b < 0)) {
+                alert(a * b)
+            }
+            else {
+                alert(a + b)
+            }
+        }
+
+        let choice = confirm('Easy or Hard? OK - Easy, Cancel - Hard')
+        if (choice == true) {
+            EasyWay();
+        } else if (choice == false) {
+            HardWay();
+        }
+
+    </script>
+</body>
+
+</html>
