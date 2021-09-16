@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 2 task 4</title>
+</head>
+
+<body>
+    <script>
+        'use strict';
+        /*
+        Реализовать основные 4 арифметические операции (+, -, /, *) в виде функций с двумя
+        параметрами. Т.е. например, функция для сложения должна принимать два числа, складывать их
+        и возвращать результат.
+        Обязательно использовать оператор return.
+        */
+
+        let a = Number(prompt('Insert first operand:'));
+        let b = Number(prompt('Insert second operand:'));
+        let choice = prompt('Enter the math action: +, -, *, /:');
+        function MySum(a, b) {
+            return (a + b)
+        }
+        function MySubtract(a, b) {
+            return (a - b)
+        }
+        function MyProduct(a, b) {
+            return (a * b)
+        }
+        function MyDivision(a, b) {
+            return (a / b)
+        }
+        switch (choice) {
+            case '+': alert('Result of ' + a + ' + ' + b + ' is ' + MySum(a, b))
+                break
+            case '-': alert('Result of ' + a + ' - ' + b + ' is ' + MySubtract(a, b))
+                break
+            case '*': alert('Result of ' + a + ' * ' + b + ' is ' + MyProduct(a, b))
+                break
+            case '/': alert('Result of ' + a + ' / ' + b + ' is ' + MyDivision(a, b))
+                break
+        }
+
+    </script>
+</body>
+
+</html>

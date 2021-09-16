@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 2 task 5</title>
+</head>
+
+<body>
+    <script>
+        'use strict';
+        /*
+        Реализовать функцию с тремя параметрами: function mathOperation(arg1, arg2, operation),
+        где arg1, arg2 – значения аргументов, operation – строка с названием операции. В зависимости от
+        переданного значения операции (использовать switch) выполнить одну из арифметических
+        операций
+        (использовать функции из задания 4) и вернуть полученное значение.
+        */
+        //Функции из задания 4:
+        function MySum(arg1, arg2) {
+            return (arg1 + arg2)
+        }
+        function MySubtract(arg1, arg2) {
+            return (arg1 - arg2)
+        }
+        function MyProduct(arg1, arg2) {
+            return (arg1 * arg2)
+        }
+        function MyDivision(arg1, arg2) {
+            return (arg1 / arg2)
+        }
+        //Решение
+        let arg1 = Number(prompt('Insert first operand:'));
+        let arg2 = Number(prompt('Insert second operand:'));
+        let operation = prompt('Enter the math action: +, -, *, /:');
+        function mathOperation(arg1, arg2, operation) {
+            switch (operation) {
+                case '+':
+                    return MySum(arg1, arg2);
+                    break
+                case '-':
+                    return MySubtract(arg1, arg2);
+                    break
+                case '*':
+                    return MyProduct(arg1, arg2);
+                    break
+                case '/':
+                    return MyDivision(arg1, arg2);
+                    break
+            }
+        }
+
+        alert(arg1 + ' ' + operation + ' ' + arg2 + ' = ' + mathOperation(arg1, arg2, operation))
+    </script>
+</body>
+
+</html>
